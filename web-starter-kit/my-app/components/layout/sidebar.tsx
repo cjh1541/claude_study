@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  Home,
   LayoutDashboard,
   BarChart3,
   Settings,
@@ -25,7 +26,13 @@ export function Sidebar() {
   return (
     <aside className="hidden md:flex flex-col w-64 border-r border-border/40 bg-background/50 h-screen">
       <div className="p-6">
-        <h2 className="font-semibold text-lg">메뉴</h2>
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-semibold text-lg hover:opacity-80 transition-opacity"
+        >
+          <Home className="h-5 w-5" />
+          Web Kit
+        </Link>
       </div>
 
       <nav className="flex-1 px-3 space-y-2">
